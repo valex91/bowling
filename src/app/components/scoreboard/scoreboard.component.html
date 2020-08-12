@@ -1,0 +1,15 @@
+<div class="Scoreboard-framesContainer">
+  <bowling-frame class="scoreboard-frame"
+                 *ngFor="let frame of bowlingGame.frames | slice:0:10"
+                 [bowlingFrameFrame]="frame"></bowling-frame>
+</div>
+
+<button
+  [disabled]="bowlingGame.isFinished()"
+  (click)="bowlingGame.throwBall()">Throw ball</button>
+
+<button
+  *ngIf="bowlingGame.isFinished()"
+  (click)="requestNewGame()">another go</button>
+
+

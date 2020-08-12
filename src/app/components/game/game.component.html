@@ -1,0 +1,10 @@
+<h1>Bowling game</h1>
+<button type="button"
+        *ngIf="!game; else score"
+        (click)="newGame()">New game
+</button>
+<ng-template #score>
+  <bowling-scoreboard
+    (bowlinGameRequestNewGame)="newGame()"
+    [bowlingGame]="game"></bowling-scoreboard>
+</ng-template>
