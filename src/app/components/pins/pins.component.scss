@@ -1,0 +1,56 @@
+.Pins {
+  $color-wood: #c49c82;
+  $color-pin: #ffffff;
+  $frame-size: 180px;
+
+  &-field {
+
+  }
+
+  &-rows {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  &-pin {
+    display: inline-block;
+    border-radius: 50%;
+    background: $color-pin;
+    width: 10px;
+    height: 10px;
+
+    &.knocked {
+      visibility: hidden;
+    }
+
+    & ~ & {
+      margin-left: 10px;
+    }
+  }
+
+  &-image {
+    width: $frame-size;
+  }
+
+  &-box {
+    position: relative;
+    width: $frame-size;
+    height: 90px;
+    background: grey;
+    text-align: center;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      border: solid $color-wood 90px;
+      border-bottom-width: 0;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      content: '';
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<div class="Pins-box" *ngIf="bowlingPinsFrame.status === frameStatus.Default; else promo">
+  <div class="Pins-field">
+    <div class="Pins-rows">
+      <div class="Pins-row">
+        <span class="Pins-pin" [ngClass]="getKnockedStatus(10)"></span>
+        <span class="Pins-pin" [ngClass]="getKnockedStatus(9)"></span>
+        <span class="Pins-pin" [ngClass]="getKnockedStatus(8)"></span>
+        <span class="Pins-pin" [ngClass]="getKnockedStatus(7)"></span>
+      </div>
+      <div class="Pins-row">
+        <span class="Pins-pin" [ngClass]="getKnockedStatus(6)"></span>
+        <span class="Pins-pin" [ngClass]="getKnockedStatus(5)"></span>
+        <span class="Pins-pin" [ngClass]="getKnockedStatus(4)"></span>
+      </div>
+      <div class="Pins-row">
+        <span class="Pins-pin" [ngClass]="getKnockedStatus(3)"></span>
+        <span class="Pins-pin" [ngClass]="getKnockedStatus(2)"></span>
+      </div>
+      <div class="Pins-row">
+        <span class="Pins-pin" [ngClass]="getKnockedStatus(1)"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #promo>
+  <h3 class="Pins-claim">{{ bowlingPinsFrame.status }}</h3>
+  <img
+    class="Pins-image"
+    src="/assets/smashed-pin.jpg">
+</ng-template>
