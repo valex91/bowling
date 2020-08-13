@@ -8,7 +8,7 @@ import { FrameStub } from '../frame/frame.service.stub';
 
 import { BowlingGame } from './bowling.game';
 
-fdescribe('BowlingGameService', () => {
+describe('BowlingGameService', () => {
   let bowlingService: BowlingGame,
     frameStub: FrameStub,
     dependencies: {

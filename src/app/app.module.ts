@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { GameComponent } from './components/game/game.component';
 import { ScoreboardComponent } from './components/scoreboard/scoreboard.component';
 import { FrameComponent } from './components/frame/frame.component';
+import { PinsComponent } from './components/pins/pins.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameComponent,
     ScoreboardComponent,
-    FrameComponent
+    FrameComponent,
+    PinsComponent
   ],
   imports: [
     BrowserModule,

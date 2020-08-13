@@ -3,9 +3,8 @@ import { PinActionServiceStub } from '../pin-action/pin-action.service.stub';
 import { FrameStatus } from './fram.interface';
 
 import { Frame } from './frame';
-import { FrameStub } from './frame.service.stub';
 
-fdescribe('FrameService', () => {
+describe('FrameService', () => {
   let frame: Frame,
     dependency: {
       pinAction: PinActionServiceStub

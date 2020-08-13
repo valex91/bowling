@@ -1,9 +1,11 @@
 <div class="Frame-container">
-  <div class="Frame-bowl" *ngFor="let bowl of bowlingFrameFrame.points">
-    {{ bowl }}
+  <div class="Frame-bowlContainer">
+    <div class="Frame-bowl" *ngFor="let bowl of bowlingFrameFrame.points">
+      {{ bowl }}
+    </div>
   </div>
   <div class="Frame-status">
-    {{ bowlingFrameFrame.status }}
+    {{ getStatusSign(bowlingFrameFrame.status) }}
   </div>
   <div class="Frame-total">
     {{ bowlingFrameFrame.total }}

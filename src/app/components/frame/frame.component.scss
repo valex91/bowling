@@ -1,5 +1,22 @@
 .Frame {
   &-container {
+    text-align: center;
     border: 1px solid black;
+    width: 80px;
+    height: 60px;
+  }
+
+  &-bowl {
+    flex: 1 0 auto;
+
+    & ~ & {
+      border-left: 1px solid black;
+    }
+  }
+
+  &-bowlContainer {
+    display: flex;
+    border-bottom: 1px solid black;
+    justify-content: center;
   }
 }

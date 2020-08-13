@@ -1,15 +1,26 @@
+<div class="Scoreboard-buttonContainer">
+  <button
+    [disabled]="bowlingGame.isFinished()"
+    (click)="bowlingGame.throwBall()">Throw ball
+  </button>
+
+  <button
+    *ngIf="bowlingGame.isFinished()"
+    (click)="requestNewGame()">another go
+  </button>
+</div>
+<h3 class="scoreboard-tip">You can click on a frame to see the details</h3>
 <div class="Scoreboard-framesContainer">
   <bowling-frame class="scoreboard-frame"
                  *ngFor="let frame of bowlingGame.frames | slice:0:10"
+                 (click)="selectedFrame(frame)"
                  [bowlingFrameFrame]="frame"></bowling-frame>
 </div>
+<div *ngIf="bowlingGame">
+  Total: {{ totalForGame() }}
+</div>
+<bowling-pins [bowlingPinsFrame]="selected" *ngIf="selected"></bowling-pins>
 
-<button
-  [disabled]="bowlingGame.isFinished()"
-  (click)="bowlingGame.throwBall()">Throw ball</button>
 
-<button
-  *ngIf="bowlingGame.isFinished()"
-  (click)="requestNewGame()">another go</button>
 
 

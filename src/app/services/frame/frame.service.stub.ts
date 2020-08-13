@@ -1,5 +1,5 @@
 import { Bowl } from '../bowl/bowl.service';
-import { IFrame } from './fram.interface';
+import { FrameStatus, IFrame } from './fram.interface';
 
 export class FrameStub implements IFrame {
   public points: Array<number>;
@@ -9,6 +9,8 @@ export class FrameStub implements IFrame {
   public total: number;
 
   public addBowl: (bowl: Bowl) => void = jasmine.createSpy('frameStub.addBowl');
+
+  public status: FrameStatus;
 
   public play: () => Bowl = jasmine.createSpy('frameStub.play');
 }

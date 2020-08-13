@@ -2,7 +2,7 @@ import { Frame } from '../frame/frame';
 import { PinActionServiceStub } from '../pin-action/pin-action.service.stub';
 import { FrameFactoryService } from './frame-factory.service';
 
-fdescribe('frameFactoryService', () => {
+describe('frameFactoryService', () => {
   let frameFactory: FrameFactoryService,
     dependencies: { pinAction: PinActionServiceStub };
 

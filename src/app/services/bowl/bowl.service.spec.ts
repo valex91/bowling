@@ -1,6 +1,6 @@
 import { Bowl } from './bowl.service';
 
-fdescribe('BowlService', () => {
+describe('BowlService', () => {
   let bowl: Bowl;
 
   beforeEach(() => {

@@ -4,7 +4,7 @@ import { FrameFactoryStub } from '../frame-factory/frame-factory.sevice.stub';
 
 import { BowlingGameFactoryService } from './bowling-game-factory.service';
 
-fdescribe('BowlingGameFactoryService', () => {
+describe('BowlingGameFactoryService', () => {
   let bowlingGameFactory: BowlingGameFactoryService,
     dependencies: { frameFactory: FrameFactoryStub };
 
