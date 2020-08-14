@@ -9,10 +9,6 @@ import { PinsComponent } from './pins.component';
 describe('PinsComponent', () => {
   let fixture: ComponentFixture<TestHost>;
 
-  function getImage(): DebugElement {
-    return fixture.debugElement.query(By.css('.Pins-image'));
-  }
-
   function getClaim(): DebugElement {
     return fixture.debugElement.query(By.css('.Pins-claim'));
   }
@@ -62,10 +58,6 @@ describe('PinsComponent', () => {
         fixture.detectChanges();
       });
 
-      it('should show the bonus image', () => {
-        expect(getImage()).toBeTruthy();
-      });
-
       it('should show the bonus name', () => {
         expect(getClaim().nativeElement.textContent.trim()).toBe('strike');
       });
@@ -75,10 +67,6 @@ describe('PinsComponent', () => {
       beforeEach(() => {
         fixture.componentInstance.frame.status = FrameStatus.Spare;
         fixture.detectChanges();
-      });
-
-      it('should show the bonus image', () => {
-        expect(getImage()).toBeTruthy();
       });
 
       it('should show the bonus name', () => {
