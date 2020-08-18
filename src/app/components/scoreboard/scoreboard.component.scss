@@ -1,9 +1,6 @@
 .Scoreboard {
   &-framesContainer {
     display: flex;
-  }
-
-  &-frames {
-
+    flex-wrap: wrap;
   }
 }
